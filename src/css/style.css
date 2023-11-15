@@ -47,3 +47,14 @@ p {
 .load-more.is-hidden {
   display: none;
 }
+.photo-card {
+  margin-bottom: 10px;
+  width: 300px;
+
+  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.photo-card:last-child {
+  margin-bottom: 0;
+}
