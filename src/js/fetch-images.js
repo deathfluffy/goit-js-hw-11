@@ -1,9 +1,10 @@
 import axios from 'axios';
 
-export default async function fetchImages(value, page) {
-  const url = 'https://pixabay.com/api/';
-  const key = '34523545-f21683fd59bfc3e4e2549fe07';
-  const filter = `?key=${key}&q=${value}&image_type=photo&orientation=horizontal&safesearch=true&per_page=40&page=${page}`;
+const URL = 'https://pixabay.com/api/';
+const KEY = '34523545-f21683fd59bfc3e4e2549fe07';
 
-  return await axios.get(`${url}${filter}`).then(response => response.data);
+export async function fetchPhoto(q, page, perPage) {
+  const url = `${URL}?key=${KEY}&q=${q}&page=${page}&per_page=${perPage}&image_type=photo&orientation=horizontal&safesearch=true`;
+  const response = await axios.get(url);
+  return response.data;
 }

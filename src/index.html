@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,13 +34,17 @@
       </button>
     </form>
 
-    <div class="gallery"></div>
+    <div class="container">
+      <div class="gallery"></div>
+      <button type="button" class="load-more is-hidden">Load more</button>
+      <p class="end-collection-text is-hidden">
+        We're sorry, but you've reached the end of search results.
+      </p>
+    </div>
 
     <div class="preloader is-hidden">
       <div class="loader"></div>
     </div>
-
-    <button type="button" class="load-more is-hidden">Load more</button>
 
     <script src="./index.js" type="module"></script>
   </body>
